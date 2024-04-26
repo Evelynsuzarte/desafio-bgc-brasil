@@ -1,139 +1,114 @@
-<!--
-title: 'Serverless Framework Node Express API service backed by DynamoDB on AWS'
-description: 'This template demonstrates how to develop and deploy a simple Node Express API service backed by DynamoDB running on AWS Lambda using the traditional Serverless Framework.'
-layout: Doc
-framework: v3
-platform: AWS
-language: nodeJS
-priority: 1
-authorLink: 'https://github.com/serverless'
-authorName: 'Serverless, inc.'
-authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
--->
-
-# Serverless Framework Node Express API on AWS
-
-This template demonstrates how to develop and deploy a simple Node Express API service, backed by DynamoDB database, running on AWS Lambda using the traditional Serverless Framework.
+<div id="inicio">
+    <h1 id="titulo" align="center"> Desafio Backend BGC Brasil - API, Web Scrapping e AWS</h1>
+	<h2 id="titulo" align="center"> Por Evelyn Suzarte Fernandes</h1>
+	<p id="descricao" align="justify"></p>	
+    <p align ="center"><img src="http://img.shields.io/static/v1?label=STATUS&message=Concluido&color=GREEN&style=for-the-badge"/>
+</div>
 
 
-## Anatomy of the template
 
-This template configures a single function, `api`, which is responsible for handling all incoming requests thanks to the `httpApi` event. To learn more about `httpApi` event configuration options, please refer to [httpApi event docs](https://www.serverless.com/framework/docs/providers/aws/events/http-api/). As the event is configured in a way to accept all incoming requests, `express` framework is responsible for routing and handling requests internally. Implementation takes advantage of `serverless-http` package, which allows you to wrap existing `express` applications. To learn more about `serverless-http`, please refer to corresponding [GitHub repository](https://github.com/dougmoscrop/serverless-http). Additionally, it also handles provisioning of a DynamoDB database that is used for storing data about users. The `express` application exposes two endpoints, `POST /users` and `GET /user/{userId}`, which allow to create and retrieve users.
+<div id="sumario">
+    <h1>Sumário</h1>
+	<ul>
+        <li><a href="#objetivos"> <b>Objetivos</b></li>
+        <li><a href="#tecnologias"> <b>Tecnologias</b></li>
+		<li><a href="#requisitos"> <b>Requisitos</b></li>
+        <li><a href="#acessar-api"> <b>Acessar API</b></li>
+        <li><a href="#conclusao"> <b>Conclusão</b> </a> </li>
+	</ul>	
+</div>
 
-## Usage
 
-### Deployment
+<div id="objetivos">
+	<h1>Objetivos</h1>
+	<p>O objetivo desse projeto é desenvolver um projeto Web Scrapping de um ecommerce que serve para exibir os três produtos mais vendidos e interagir com uma API criada com os serviços da AWS e NodeJs. O ecommerce utilizado para essa aplicação foi do Mercado Livre.</p>
+</div>
 
-Install dependencies with:
 
-```
-npm install
-```
+<div id="tecnologias">
+	<h1>Tecnologias utilizadas</h1>
+	<ul>        
+		<li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+        <li><a href="https://pptr.dev/">Puppeteer </a></li>
+        <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">Serverless Framework</a></li>
+        <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">NodeJS</a></li>
+        <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">AWS API Gateway</a></li>
+        <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">AWS DynamoDB</a></li>
+        <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">AWS Lambda</a></li>
+	</ul>
+</div>
 
-and then deploy with:
 
-```
-serverless deploy
-```
+<div id="requisitos">
+    <h1>Requisitos</h1>
+	<ul>
+		<li>Retorne os três primeiros produtos da página de mais vendidos :heavy_check_mark:</li>
+		<li>Utilizar Lambda para computação, API Gateway para gestão da API e DynamoDB para banco de dados :heavy_check_mark:</li>
+        <li>Utilizar Pupperteer para Web Scrapping :heavy_check_mark:</li>
+		<li>Criar endpoints :heavy_check_mark:</li>
+</div>
 
-After running deploy, you should see output similar to:
+<div id="acessar-api">
+    <h1>API</h1>
+	<li><a href="https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/">Acesse clicando aqui</a></li>
+    <p>O teste pode ser feito através do navegador ou de um programa para teste de API, como o Postman ou Insomnia.</p> 
+    <p></p>
+    <h4>Endpoints:</h4>
+    <table border="1" align="center">
+    <tr>
+        <td>Endpoint</td>
+        <td>Método</td>
+        <td>Descrição</td>
+        <td>Link</td>
+        <td>Exemplo de entrada</td>
+    </tr>
+    <tr>
+        <td>/produtos</td>
+        <td>GET</td>
+        <td>Retorna todos os produtos cadastrados no banco de dados</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/produtos</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>/produtos/adicionar</td>
+        <td>POST</td>
+        <td>Adiciona produtos no banco de dados através da entrada de dados via JSON</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/adicionar</td>
+        <td>  {
+            "productId": "10_Eletrônicos",
+            "name": "Notebook Dell Inspiron 15 3000",
+            "valor": "3499.00",
+            "category": "Eletrônicos"
+        }
+        </td>
+    </tr>
+        <tr>
+        <td>/produtos/adicionar-pupper</td>
+        <td>POST</td>
+        <td>Adiciona no banco de dados os produtos extraídos através do web scrapping da página.</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/produtos/adicionar-pupper</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>/produtos/categoria/{category}</td>
+        <td>GET</td>
+        <td>Busca os produtos por categoria.</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/produtos/categoria/{category}</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/produtos/categoria/CELULARES E TELEFONES</td>
+    </tr>
+    <tr>
+        <td>/produtos/id/{productId}</td>
+        <td>GET</td>
+        <td>Busca os produtos através do ID.</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/produtos/id/{productId}</td>
+        <td>https://82qunkwy1e.execute-api.us-east-1.amazonaws.com/produtos/id/2_ACESSÓRIOS </td>
+    </tr>
+</table>
 
-```bash
-Deploying aws-node-express-dynamodb-api-project to stage dev (us-east-1)
 
-✔ Service deployed to stack aws-node-express-dynamodb-api-project-dev (196s)
+<div id="conclusao">
+	<h1>Conclusão</h1>
+	<p>A API funciona como esperado, cumprindo todos os requisitos. Foi utilizado o Mercado Livre como ecommerce para o Web Scrapping. Todas as ferramentas propostas para uso foram utilizadas com sucesso.</p>
+</div>
 
-endpoint: ANY - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
-functions:
-  api: aws-node-express-dynamodb-api-project-dev-api (766 kB)
-```
-
-_Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [`httpApi` event docs](https://www.serverless.com/framework/docs/providers/aws/events/http-api/). Additionally, in current configuration, the DynamoDB table will be removed when running `serverless remove`. To retain the DynamoDB table even after removal of the stack, add `DeletionPolicy: Retain` to its resource definition.
-
-### Invocation
-
-After successful deployment, you can create a new user by calling the corresponding endpoint:
-
-```bash
-curl --request POST 'https://xxxxxx.execute-api.us-east-1.amazonaws.com/users' --header 'Content-Type: application/json' --data-raw '{"name": "John", "userId": "someUserId"}'
-```
-
-Which should result in the following response:
-
-```bash
-{"userId":"someUserId","name":"John"}
-```
-
-You can later retrieve the user by `userId` by calling the following endpoint:
-
-```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/users/someUserId
-```
-
-Which should result in the following response:
-
-```bash
-{"userId":"someUserId","name":"John"}
-```
-
-If you try to retrieve user that does not exist, you should receive the following response:
-
-```bash
-{"error":"Could not find user with provided \"userId\""}
-```
-
-### Local development
-
-It is also possible to emulate DynamoDB, API Gateway and Lambda locally using the `serverless-dynamodb-local` and `serverless-offline` plugins. In order to do that, run:
-
-```bash
-serverless plugin install -n serverless-dynamodb-local
-serverless plugin install -n serverless-offline
-```
-
-It will add both plugins to `devDependencies` in `package.json` file as well as will add it to `plugins` in `serverless.yml`. Make sure that `serverless-offline` is listed as last plugin in `plugins` section:
-
-```
-plugins:
-  - serverless-dynamodb-local
-  - serverless-offline
-```
-
-You should also add the following config to `custom` section in `serverless.yml`:
-
-```
-custom:
-  (...)
-  dynamodb:
-    start:
-      migrate: true
-    stages:
-      - dev
-```
-
-Additionally, we need to reconfigure `AWS.DynamoDB.DocumentClient` to connect to our local instance of DynamoDB. We can take advantage of `IS_OFFLINE` environment variable set by `serverless-offline` plugin and replace:
-
-```javascript
-const dynamoDbClient = new AWS.DynamoDB.DocumentClient();
-```
-
-with the following:
-
-```javascript
-const dynamoDbClientParams = {};
-if (process.env.IS_OFFLINE) {
-  dynamoDbClientParams.region = 'localhost'
-  dynamoDbClientParams.endpoint = 'http://localhost:8000'
-}
-const dynamoDbClient = new AWS.DynamoDB.DocumentClient(dynamoDbClientParams);
-```
-
-After that, running the following command with start both local API Gateway emulator as well as local instance of emulated DynamoDB:
-
-```bash
-serverless offline start
-```
-
-To learn more about the capabilities of `serverless-offline` and `serverless-dynamodb-local`, please refer to their corresponding GitHub repositories:
-- https://github.com/dherault/serverless-offline
-- https://github.com/99x/serverless-dynamodb-local
+</div>

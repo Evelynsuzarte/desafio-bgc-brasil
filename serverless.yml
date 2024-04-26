@@ -78,3 +78,8 @@ resources:
           ReadCapacityUnits: 5
           WriteCapacityUnits: 5
         TableName: ${self:custom.tableName}
+
+package:
+  exclude:
+    - README.md
+    - scrapper.js
