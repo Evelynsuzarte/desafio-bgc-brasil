@@ -1,0 +1,182 @@
+[
+  {
+    "id_": "1_GAMES",
+    "name_": "SSD SATA 2.5 240GB UP GAMER UP500",
+    "price_": "R$ 14714",
+    "category_": "GAMES"
+  },
+  {
+    "id_": "2_GAMES",
+    "name_": "Cartão de memória SanDisk Ultra com adaptador SD 64GB - Modelo SDSQUNS-064G",
+    "price_": "R$ 2915",
+    "category_": "GAMES"
+  },
+  {
+    "id_": "3_GAMES",
+    "name_": "Cartão Memoria Câmera Wifi Full Hd 128gb Micro Sd Adaptador",
+    "price_": "R$ 3054",
+    "category_": "GAMES"
+  },
+  {
+    "id_": "1_ELETRODOMÉSTICOS",
+    "name_": "Liquidificador Mondial L-99 500w 2,2l C/ Jarra San Pt - 110v",
+    "price_": "R$ 11799",
+    "category_": "ELETRODOMÉSTICOS"
+  },
+  {
+    "id_": "2_ELETRODOMÉSTICOS",
+    "name_": "Ventilador De Mesa Super Power Vsp-30-b 30cm 6 Pás Mondial Cor da estrutura Preto Cor das pás Prata 127V",
+    "price_": "R$ 123",
+    "category_": "ELETRODOMÉSTICOS"
+  },
+  {
+    "id_": "3_ELETRODOMÉSTICOS",
+    "name_": "Refil Filtro Acqua Pure Electrolux Pe12a E Pe12b",
+    "price_": "R$ 9642",
+    "category_": "ELETRODOMÉSTICOS"
+  },
+  {
+    "id_": "1_FERRAMENTAS",
+    "name_": "Parafusadeira Furadeira 3/8 Bivolt A Bateria 12v Cor Amarelo Frequência 60Hz 110V/220V",
+    "price_": "R$ 106",
+    "category_": "FERRAMENTAS"
+  },
+  {
+    "id_": "2_FERRAMENTAS",
+    "name_": "Parafusadeira Furadeira De Impacto Profissional 21v Modelo TB-21PX 2 Baterias Com Maleta Tb21px The Black Tools",
+    "price_": "R$ 28990",
+    "category_": "FERRAMENTAS"
+  },
+  {
+    "id_": "3_FERRAMENTAS",
+    "name_": "Furadeira parafusadeira sem fio de 10mm Wap BPF 12K3 12V + acessório 110V/220V",
+    "price_": "R$ 17990",
+    "category_": "FERRAMENTAS"
+  },
+  {
+    "id_": "1_BELEZA E CUIDADO PESSOAL",
+    "name_": "Máquina De Cortar Cabelo Fazer Barba Acabamento Dragão",
+    "price_": "R$ 2694",
+    "category_": "BELEZA E CUIDADO PESSOAL"
+  },
+  {
+    "id_": "2_BELEZA E CUIDADO PESSOAL",
+    "name_": "Papel Higiênico Vip Leve 24 E Pague 22 Personal",
+    "price_": "R$ 4785",
+    "category_": "BELEZA E CUIDADO PESSOAL"
+  },
+  {
+    "id_": "3_BELEZA E CUIDADO PESSOAL",
+    "name_": "Maquina Acabamento Recarregável Detalhe Cabelo Barba Sem Fio",
+    "price_": "R$ 1941",
+    "category_": "BELEZA E CUIDADO PESSOAL"
+  },
+  {
+    "id_": "1_CELULARES E TELEFONES",
+    "name_": "Fone De Ouvido Bluetooth Sem Fio Tws Microfone Todos Celular",
+    "price_": "R$ 3945",
+    "category_": "CELULARES E TELEFONES"
+  },
+  {
+    "id_": "2_CELULARES E TELEFONES",
+    "name_": "Smartphone Motorola Moto G14 4G 128GB Grafite 4GB RAM",
+    "price_": "R$ 1.003",
+    "category_": "CELULARES E TELEFONES"
+  },
+  {
+    "id_": "3_CELULARES E TELEFONES",
+    "name_": "Samsung Galaxy A15 4G Dual SIM 128 GB Azul escuro 4 GB RAM",
+    "price_": "R$ 894",
+    "category_": "CELULARES E TELEFONES"
+  },
+  {
+    "id_": "1_INFORMÁTICA",
+    "name_": "Fone de ouvido in-ear Gamer sem fio Bluetooth F9-5 TWS Shenzhen Yihaotong",
+    "price_": "R$ 2729",
+    "category_": "INFORMÁTICA"
+  },
+  {
+    "id_": "2_INFORMÁTICA",
+    "name_": "Repetidor Wifi Sinal Wireless Amplificador Extensor Potente",
+    "price_": "R$ 4971",
+    "category_": "INFORMÁTICA"
+  },
+  {
+    "id_": "3_INFORMÁTICA",
+    "name_": "Suporte De Notebook Articulado Aluminio Dobrável Ergonomico",
+    "price_": "R$ 2125",
+    "category_": "INFORMÁTICA"
+  },
+  {
+    "id_": "1_ELETRÔNICOS, ÁUDIO E VÍDEO",
+    "name_": "Fone de ouvido in-ear Gamer sem fio Bluetooth F9-5 TWS Shenzhen Yihaotong",
+    "price_": "R$ 2729",
+    "category_": "ELETRÔNICOS, ÁUDIO E VÍDEO"
+  },
+  {
+    "id_": "2_ELETRÔNICOS, ÁUDIO E VÍDEO",
+    "name_": "Fire Tv Stick Lite 2ª Geração Amazon Controle Remoto Por Voz Com Alexa e Atalhos Cor Preta",
+    "price_": "R$ 24999",
+    "category_": "ELETRÔNICOS, ÁUDIO E VÍDEO"
+  },
+  {
+    "id_": "3_ELETRÔNICOS, ÁUDIO E VÍDEO",
+    "name_": "Smart Tv Samsung 32'' Hd Tizen T4300 Bivolt",
+    "price_": "R$ 1.080",
+    "category_": "ELETRÔNICOS, ÁUDIO E VÍDEO"
+  },
+  {
+    "id_": "1_ESPORTES E FITNESS",
+    "name_": "Creatina Monohidratada 600g 100% Pura Soldiers Nutrition",
+    "price_": "R$ 10533",
+    "category_": "ESPORTES E FITNESS"
+  },
+  {
+    "id_": "2_ESPORTES E FITNESS",
+    "name_": "Creatina Monohidratada 500g 100% Pura Soldiers Nutrition",
+    "price_": "R$ 9932",
+    "category_": "ESPORTES E FITNESS"
+  },
+  {
+    "id_": "3_ESPORTES E FITNESS",
+    "name_": "Suplemento Em Pó Max Titanium Without Flavor Em Pote",
+    "price_": "R$ 87",
+    "category_": "ESPORTES E FITNESS"
+  },
+  {
+    "id_": "1_CALÇADOS, ROUPAS E BOLSAS",
+    "name_": "Kit 5 Camisetas Básicas Masculina Dry Fit Lisa Tradicional",
+    "price_": "R$ 6706",
+    "category_": "CALÇADOS, ROUPAS E BOLSAS"
+  },
+  {
+    "id_": "2_CALÇADOS, ROUPAS E BOLSAS",
+    "name_": "Short Praia Masculino Bermuda Verão Academia Treino Corrida",
+    "price_": "R$ 3390",
+    "category_": "CALÇADOS, ROUPAS E BOLSAS"
+  },
+  {
+    "id_": "3_CALÇADOS, ROUPAS E BOLSAS",
+    "name_": "Kit 12 Pares Meia Masculino Cano Curto Soquete Varias Cores",
+    "price_": "R$ 2999",
+    "category_": "CALÇADOS, ROUPAS E BOLSAS"
+  },
+  {
+    "id_": "1_ACESSÓRIOS PARA VEÍCULOS",
+    "name_": "Modulo Taramps Ts400x4 400w 2 Ohms Rca Ts 400x4 Amplificador 400rms T400 4 Canais Som Automotivo",
+    "price_": "R$ 18790",
+    "category_": "ACESSÓRIOS PARA VEÍCULOS"
+  },
+  {
+    "id_": "2_ACESSÓRIOS PARA VEÍCULOS",
+    "name_": "Bomba De Encher Pneu Carro Bike Moto Portátil Digital Preto Cor Mini Calibrador Preto",
+    "price_": "R$ 138",
+    "category_": "ACESSÓRIOS PARA VEÍCULOS"
+  },
+  {
+    "id_": "3_ACESSÓRIOS PARA VEÍCULOS",
+    "name_": "Modulo Taramps Ts400x4 Amplificador 400w Digital 400rms 4 Canais Potencia T400 Ts 400 2 Ohms",
+    "price_": "R$ 17510",
+    "category_": "ACESSÓRIOS PARA VEÍCULOS"
+  }
+]

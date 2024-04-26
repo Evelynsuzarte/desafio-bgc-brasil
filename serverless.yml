@@ -1,0 +1,80 @@
+service: desafio-bgcbrasil-evelyn
+frameworkVersion: "3"
+
+plugins:
+  - serverless-plugin-include-dependencies
+
+custom:
+  tableName: "products-table-${sls:stage}"
+  region: ${opt:region, "us-east-1"}
+  esbuild:
+    bundle: true
+    minify: false
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource:
+            - Fn::GetAtt: [ProductsTable, Arn]
+  environment:
+    PRODUCTS_TABLE: ${self:custom.tableName}
+
+functions:
+  todos-produtos:
+    handler: handler.produtos
+    events:
+      - httpApi:
+          path: /produtos
+          method: get
+  produtos-categoria:
+      handler: handler.produtosCategoria
+      events:
+        - httpApi:
+            path: /produtos/categoria/{category}
+            method: get
+  produtos-id:
+      handler: handler.produtosId
+      events:
+        - httpApi:
+            path: /produtos/id/{productId}
+            method: get
+  adicionar-produtos:
+      handler: handler.produtos_add
+      events:
+        - httpApi:
+            path: /produtos/adicionar
+            method: post
+  adicionar-produtos-pupperteer:
+      handler: handler.produtos_add_pupper
+      events:
+        - httpApi:
+            path: /produtos/adicionar-pupper
+            method: post
+
+
+resources:
+  Resources:
+    ProductsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: productId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: productId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: ${self:custom.tableName}
