@@ -1,12 +1,12 @@
 const puppeteer = require('puppeteer');
 
-async function scrapeAmazonBestsellers() {
+async function scrapeMercadoBestsellers() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://www.mercadolivre.com.br/mais-vendidos');
   const product_best = [];
 
-
+    //captura de dados através com css selector
     const name = await page.$$eval('.dynamic-carousel__title', elements => {
         return elements.map(element => element.innerText.trim());
     });
@@ -26,6 +26,7 @@ async function scrapeAmazonBestsellers() {
 
  //console.log([ name, category, price, position]);
 
+// adiciona produtos no vetor 
  let contador = 0;
  let ultimaposicao = 0;
 
@@ -55,10 +56,10 @@ async function scrapeAmazonBestsellers() {
 
 
 
-// scrapeAmazonBestsellers()
+// scrapeMercadoBestsellers()
 //   .then((products) => console.log(products))
 //   .catch((error) => console.error('Erro ao fazer scraping:', error));
 
-scrapeAmazonBestsellers().then((products) => console.log(products))
+scrapeMercadoBestsellers().then((products) => console.log(products))
 
-module.exports.scrapeAmazonBestsellers = scrapeAmazonBestsellers;
+module.exports.scrapeMercadoBestsellers = scrapeMercadoBestsellers;

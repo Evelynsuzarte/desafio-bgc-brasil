@@ -114,7 +114,7 @@ app.post("/produtos_add", produtos_add);
 module.exports.produtos_add = produtos_add;
 
 
-// endpoint para adicionar produto com o webscrapper
+// endpoint para adicionar produto com o json do webscrapper feito
 async function produtos_add_pupper(req, res){
   filePath = "data.json";
   const DATA = await read_data(filePath);
@@ -147,7 +147,7 @@ app.post("/adicionar-pupper", produtos_add_pupper);
 module.exports.produtos_add_pupper = produtos_add_pupper;
 
 
-
+// função para ler dados de arquivo
 async function read_data(filePath) {
     try {
       const jsonData = fs.readFileSync(filePath, 'utf8');
@@ -165,6 +165,7 @@ async function read_data(filePath) {
 module.exports.read_data = read_data;
 
 
+// erro para qualquer endpoint não definido
 app.use((req, res, next) => {
   return res.status(404).json({
     error: "Endpoint não encontrado",

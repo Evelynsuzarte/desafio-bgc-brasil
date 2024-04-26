@@ -56,6 +56,7 @@
     <p>O teste pode ser feito através do navegador ou de um programa para teste de API, como o Postman ou Insomnia.</p> 
     <p></p>
     <h4>Endpoints:</h4>
+    <p>Nesse sistema é possível adicionar e visualizar os três primeiros produtos em alta de todas as categorias, é adicionado por meio do arquivo de dados gerado pelo Web Scrapping, além de visualizar por categoria e id, também é possível adicionar manualmente um produto.</p>
     <table border="1" align="center">
     <tr>
         <td>Endpoint</td>
