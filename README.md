@@ -35,6 +35,8 @@
         <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">AWS API Gateway</a></li>
         <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">AWS DynamoDB</a></li>
         <li><a href="https://aws.amazon.com/pt/?nc2=h_lg">AWS Lambda</a></li>
+        <h5>Ecommerce utilizado</h5>
+        <li><a href="https://www.mercadolivre.com.br/mais-vendidos">Mercado Livre - Mais vendidos</a></li>
 	</ul>
 </div>
 
